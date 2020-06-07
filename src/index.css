@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+h3 {
+  margin: 0;
+}
 li {
   list-style: none;
   padding: 20px;
@@ -24,4 +27,8 @@ li {
 }
 .dispFlex {
   display: flex;
+  align-items: center;
+}
+.m-10 {
+  margin: 10px 0;
 }

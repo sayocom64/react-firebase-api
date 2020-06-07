@@ -3,6 +3,7 @@ import Booklist from "./components/Booklist";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./index.css";
 import axios from "axios";
+import Wishitems from "./components/Wishitems";
 
 const App = () => {
   const languages = ["React", "Vue", "Angular", "Ruby"];
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="container">
-        <h1>react app</h1>
+        <h1>react app-2</h1>
 
         <ul class="dispFlex">
           <li>
@@ -29,6 +30,9 @@ const App = () => {
           </li>
           <li>
             <Link to="/ruby">Ruby</Link>
+          </li>
+          <li>
+            <Link to="/list">★欲しいものリスト</Link>
           </li>
         </ul>
 
@@ -66,6 +70,17 @@ const App = () => {
             <Booklist
               language={languages[3]}
               getData={(keyword) => getDataFromAPI(keyword)}
+            />
+          )}
+        />
+        <Route
+          path="/list"
+          render={(props) => (
+            <Wishitems
+            // getWishListFromFirestore={getWishListFromFirestore}
+
+            // language={languages[3]}
+            // getData={(keyword) => getDataFromAPI(keyword)}
             />
           )}
         />
